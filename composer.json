@@ -1,0 +1,14 @@
+{
+    "name": "pcelta/di-exercise",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "authors": [
+        {
+            "name": "Pedro Ribeiro",
+            "email": "pedro.ribeiro@theiconic.com.au"
+        }
+    ],
+    "minimum-stability": "dev"
+}
