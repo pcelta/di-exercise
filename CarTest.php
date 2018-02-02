@@ -15,8 +15,7 @@ class CarTest extends \PHPUnit\Framework\TestCase
             ->method('right')
             ->will($this->returnValue('right'));
 
-        $car = new Car();
-        $car->setWheel($wheel);
+        $car = new Car($wheel);
         $result = $car->turn('right');
         $this->assertEquals('right', $result);
     }
@@ -34,8 +33,7 @@ class CarTest extends \PHPUnit\Framework\TestCase
         $wheel->expects($this->never())
             ->method('right');
 
-        $car = new Car();
-        $car->setWheel($wheel);
+        $car = new Car($wheel);
         $result = $car->turn('left');
         $this->assertEquals('left', $result);
     }

@@ -7,7 +7,7 @@ class Car
      */
     protected $wheel;
 
-    public function setWheel(Wheel $wheel)
+    public function __construct(Wheel $wheel)
     {
         $this->wheel = $wheel;
     }
@@ -16,8 +16,8 @@ class Car
     {
         if ($direction == 'right') {
             return $this->wheel->right();
-        } else {
-            return $this->wheel->left();
         }
+
+        return $this->wheel->left();
     }
 }
