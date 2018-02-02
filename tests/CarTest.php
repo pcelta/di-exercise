@@ -1,7 +1,9 @@
 <?php
 
-require_once 'Car.php';
-require_once 'Wheel.php';
+namespace Monster\Tests;
+
+use Monster\Car;
+use Monster\Wheel;
 
 class CarTest extends \PHPUnit\Framework\TestCase
 {
@@ -17,7 +19,7 @@ class CarTest extends \PHPUnit\Framework\TestCase
 
         $car = new Car($wheel);
         $result = $car->turn('right');
-        $this->assertEquals('right', $result);
+        $this->assertEquals(Wheel::DIRECTION_RIGHT, $result);
     }
 
     public function testTurnShouldReturnLeftWhenLeftDirectionIsGiven()
@@ -35,6 +37,6 @@ class CarTest extends \PHPUnit\Framework\TestCase
 
         $car = new Car($wheel);
         $result = $car->turn('left');
-        $this->assertEquals('left', $result);
+        $this->assertEquals(Wheel::DIRECTION_LEFT, $result);
     }
 }

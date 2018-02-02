@@ -1,5 +1,7 @@
 <?php
 
+namespace Monster;
+
 class Car
 {
     /**
@@ -12,9 +14,9 @@ class Car
         $this->wheel = $wheel;
     }
 
-    public function turn($direction): string
+    public function turn(string $direction): string
     {
-        if ($direction == 'right') {
+        if ($direction == Wheel::DIRECTION_RIGHT) {
             return $this->wheel->right();
         }
 
