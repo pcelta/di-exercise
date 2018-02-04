@@ -4,10 +4,20 @@
     "require": {
         "phpunit/phpunit": "^6.5"
     },
+    "autoload": {
+        "psr-4": { 
+            "Monster\\": "src/",
+            "Monster\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Pedro Ribeiro",
             "email": "pedro.ribeiro@theiconic.com.au"
+        },
+        {
+            "name": "João Lenon Thomaz",
+            "email": "jlenonweb@gmail.com"
         }
     ],
     "minimum-stability": "dev"
